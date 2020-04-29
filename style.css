@@ -32,8 +32,9 @@ body {
 
   display: flex;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
-  width: 85%;
+  width: 1em;
   margin: 0px;
   background-color: #ffffff;
 
@@ -70,7 +71,7 @@ body {
 
 /* Hero image, just for this example */
 
-hero-card {
+.hero-card {
   display: flex;
   flex-direction: column;
   border: 2px gray solid;
@@ -80,7 +81,7 @@ hero-card {
 
 .hero-card h3 {
   margin: 5px;
-  height: 1em;
+  height: 1px;
 }
 
 .hero-card img {

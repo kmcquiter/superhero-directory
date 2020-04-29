@@ -5,7 +5,7 @@ let submitButton = document.querySelector('#addHero');
 // Select reset button and call it resetButton
 let resetButton = document.querySelector('#resetForm');
 // Select main content area and call it main
-let main = document.querySelector('row-main');
+let main = document.querySelector('.row-main');
 // Select how to use element and call it howToUse
 let howToUse = document.querySelector('#howTo');
 // Create an empty array for all heroes and call it heroes
@@ -23,11 +23,14 @@ function createHeroesArray(e) {
     // Prevent the button from doing what it naturally does (redirect to a new page)
     e.preventDefault();
 
+    let heroName = document.querySelector('#name').value;
+    let heroQuote = document.querySelector('#quote').value;
+    let heroImgURL = document.querySelector('#imgURL').value;
     // Create a new Hero object that stores the values of each input field (name, quote, imgURL)
 
-    let newHero = new Hero(name, quote, imgURL);
+    let newHeroObject = new Hero(heroName, heroQuote, heroImgURL);
     // Push the new object into the heroes array
-    heroes.push(newHero);
+    heroes.push(newHeroObject);
 
     // call the createCard function (you will make this shortly)
     createCard();
@@ -60,40 +63,40 @@ function createCard() {
         // CREATE A CARD
         //create elements for div.card, h3, img, p
 
-        let newCard = document.createElement('div.card');
-        let newH3 = document.createElement('h3');
-        let newImg = document.createElement('img');
-        let newP = document.createElement('p');
+        let addCard = document.createElement('div.card');
+        let addH3 = document.createElement('h3');
+        let addImg = document.createElement('img');
+        let addP = document.createElement('p');
 
         // add a class called hero-card to div.card element
-        newCard.className = 'hero-card';
+        addCard.className = 'hero-card';
 
         // add a class called heroImg to the img element
-        newImg.className = 'heroImg';
+        addImg.className = 'heroImg';
         // set attribute src to the img element with the imgURL from the heroes array
 
-        newImg.src = heroes[i].imgURL;
+        addImg.src = heroes[i].imgURL;
 
 
         // create textnode with the hero's name and append it into the h3 element
         let h3TextNode = document.createTextNode(heroes[i].name);
-        h3TextNode.appendChild(h3Elem);
+        addH3.appendChild(h3TextNode);
         // create textnode with the hero's quote and append into the p element
         let pTextNode = document.createTextNode(heroes[i].quote);
-        pTextNode.appendChild(pElem);
+        addP.appendChild(pTextNode);
         // append h3 to card
 
-        newCard.appendChild(newH3);
+        addCard.appendChild(addH3);
 
         // apend img to card
-        newCard.appendChild(newImg);
+        addCard.appendChild(addImg);
 
         // apend p to card
-        newCard.appendChild(newP);
+        addCard.appendChild(addP);
 
         // append card to main
 
-        main.appendChild(newCard);
+        main.appendChild(addCard);
     }
 
 
