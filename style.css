@@ -9,7 +9,7 @@
 body {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  margin: 0px;
 }
 
 /* Header/logo Title */
@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("./images/header_img.jpg");
+  background-image: url("images/header_img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,12 +34,17 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  width: 1em;
+  width: 70em;
   margin: 0px;
   background-color: #ffffff;
 
 }
-
+.header-text h1,p{
+  margin: 0px;
+}
+#addHero{
+  background-color: #265aae;border: 1px solid #265aae;color:white;
+}
 
 /* Column container */
 .row{
@@ -51,15 +56,18 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side{
-
+  padding: 10px;
  display: flex;
  flex-direction: column;
  width: 30%;
  background-color:#f1f1f1;
 
 }
-
-
+.side input,button{
+  width: 100%;
+  margin: 2px 0px;
+  padding: 5px;
+}
 /* Main column */
 .row-main{
 
@@ -67,6 +75,7 @@ body {
   flex-direction: row;
   width: 80%;
   flex-wrap: wrap;
+  padding: 0px 25px; 
 }
 
 /* Hero image, just for this example */
@@ -74,24 +83,24 @@ body {
 .hero-card {
   display: flex;
   flex-direction: column;
-  border: 2px gray solid;
-  width: 320px;
-  margin: 20px 5px;
+  border: 1px gray solid;
+  width: 300px;
+  margin: 10px 5px;
+  padding: 5px;
 }
 
-.hero-card h3 {
-  margin: 5px;
-  height: 1px;
+.hero-card h4 {
+  margin: 0px;padding: 15px 0px;
 }
 
 .hero-card img {
-  margin: 5px;
+  margin: 0px;
   height: 300px;
   width: auto;
 }
 
 .hero-card p {
-  margin: 5px;
+  font-size: 20px;margin: 0px;padding-top: 5px;
 }
 
 
@@ -118,4 +127,3 @@ body {
     margin: 20px 0;
   }
   
-}
